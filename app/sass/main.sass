@@ -1,0 +1,232 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.container
+		width: 1000px
+		padding: 0
+
+li
+	list-style-type: none
+
+a
+	color: inherit
+	&:hover,&:active,&:focus
+		color: $accent
+		text-decoration: none
+		transition: all 0.5s ease
+h1,h2,h3,h4,h5
+	text-transform: uppercase
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+/*HEADER*/
+	/*HEADER TOP*/
+.header
+	&__top
+		background-color: rgb(232,235,241)
+		&--flex
+			display: flex
+			align-items: center	
+			padding: 15px 0 24px 0
+	&__logo
+		font-size: 50px
+		padding-right: 205px
+
+	&__nav-box
+		width: 100%	
+	&__nav
+		margin: 5px 0 0 0 
+		display: flex
+		justify-content: space-between
+		cursor: pointer
+		&__item
+			text-transform: uppercase
+			font-size: 13px
+			padding: 10px 15px
+			border-top: 5px solid transparent
+			&:hover
+				color: $accent
+				background-color: #fff
+				border-color: $accent
+
+
+.header__nav__item--dropdown
+	&::after
+		content: url('../img/icons/arrows/arrow-down.svg')
+		position: relative
+		top: -1px
+		margin-left: 7px
+.dropdown__content
+	border: 1px solid rgb(232,235,241)
+	border-top: 0
+	border-bottom: 0
+	display: none
+	text-transform: none
+	background-color: #fff
+	min-width: 200px
+	margin-left: -16px
+	margin-top: 5px
+
+	position: absolute
+.dropdown:hover .dropdown__content
+	display: block
+
+	color: #000
+.dropdown
+	&__item
+		padding: 7px 15px 15px 15px
+		display: block
+		z-index: 2
+		transition: all 0.5s ease
+		&:hover
+			color: $accent
+		&:first-child
+			padding-top: 22px
+		&:last-child
+			padding-bottom: 22px
+			border-bottom: 5px solid $accent
+		&::after
+			background-color: rgb(231,231,231)
+			content: ''
+			width: 187px
+			height: 1px
+			display: block
+			position: absolute
+
+	/*HEADER TOP END*/
+
+	/*HEADER SLIDER*/
+.ug-slider-wrapper
+	background-color: rgb(129, 228, 237)!important
+.ug-slider-control .ug-bullets .ug-skin-default
+	margin-top: 10px!important
+#gallery
+	min-width: 1000px!important
+	min-height: 440px!important
+.header
+	&__slider
+		width: 100%
+		height: 500px
+		padding-top: 20px
+		background-color: rgb(129, 228, 237)
+		position: relative
+	.slider__wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+.bullets__menu
+	margin-top: 9px
+.bullet
+	display: inline-block
+	margin-right: 14px
+	height: 14px
+	width: 14px
+	border-radius: 50%
+	background-color: rgb(113,163,167)
+	&:last-child
+		margin-right: 0
+	&--active
+		background-color: #fff
+ 
+/*MIDDLE SECTION*/
+.middle-section
+	height: 300px
+	position: relative
+	background-color: rgb(232,235,241)
+	&__content
+		margin: 50px 0
+		display: flex
+		width: 100%
+		position: relative
+		justify-content: space-between
+	&__item
+		display: flex
+		flex-direction: column
+		flex-basis: 220px
+		&:before
+				background-color: $accent
+				content: ''
+				text-align: center
+				width: 40px
+				height: 40px
+				border-radius: 20px
+				position: absolute
+				z-index: 0
+				margin-left: -9.5px
+				margin-top: -6px
+
+				display: inline-block
+		&__icon
+			display: inline-block
+			z-index: 2
+			position: relative
+		&__title
+			margin: 0 0 0 20px
+			font-size: 15px
+			vertical-align: center
+			display: inline-block
+		&__text
+			font-size: 13px
+			margin-top: 20px
+		&--more
+			font-size: 13px
+			margin-top: 25px
+			color: $accent
+			transition: all 0.5s ease
+			&:hover
+				color: darken($accent, 10%)
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+@import "media" // Всегда в конце
