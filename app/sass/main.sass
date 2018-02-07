@@ -63,6 +63,7 @@ h1,h2,h3,h4,h5
 .text-center
 	text-align: center
 
+
 ::selection
 	background-color: $accent
 	color: #fff
@@ -148,7 +149,7 @@ h1,h2,h3,h4,h5
 	background-color: rgb(129, 228, 237)!important
 .ug-slider-control .ug-bullets .ug-skin-default
 	margin-top: 10px!important
-#gallery
+#slider
 	min-width: 1000px!important
 	min-height: 440px!important
 .header
@@ -180,9 +181,10 @@ h1,h2,h3,h4,h5
 .middle-section
 	height: 300px
 	position: relative
+	border-bottom: 1px solid rgb(217,217,217)
 	background-color: rgb(232,235,241)
 	&__content
-		margin: 50px 0
+		margin: 60px 0 0
 		display: flex
 		width: 100%
 		position: relative
@@ -218,11 +220,50 @@ h1,h2,h3,h4,h5
 			margin-top: 20px
 		&--more
 			font-size: 13px
-			margin-top: 25px
+			margin-top: 20px
 			color: $accent
 			transition: all 0.5s ease
 			&:hover
 				color: darken($accent, 10%)
+
+/*WORKS SECTION*/
+.works
+	&__header
+		padding-top: 20px
+		border-bottom: 1px solid rgb(223,225,229)
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 15px
+		&__cursor
+			display: inline-block
+			vertical-align: top
+		&__title
+			display: inline-block
+			font-size: 15px
+			margin: 0 0 0 18px			
+		&__arrow-left,&__arrow-right
+			display: inline-block
+			width: 25px
+			height: 25px
+			position: relative
+			background-color: rgb(129, 228,237)
+			border-radius: 20px
+			cursor: pointer
+			img
+				margin-left: 50%
+				margin-top: -2px
+				transform: translate(-50%)
+				background-color: rgb(129, 228,237)
+		&__arrow-left
+			margin-right: 5px
+	&__carousel
+		height: 200px
+		width: 100%
+		margin-top: 20px
+		border-bottom: 1px solid rgb(223,225,229)
+
+			
 
 .img-responsive
 	display: block
