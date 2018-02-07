@@ -267,6 +267,7 @@ h1,h2,h3,h4,h5
 
 .testimonials-clients
 	display: flex
+	justify-content: space-between
 	margin-top: 10px
 	margin-bottom: 32px
 .testimonials
@@ -302,15 +303,45 @@ h1,h2,h3,h4,h5
 				border-top: 0
 			&:nth-child(-n+2)
 				border-right: 0
-			&:nth-child(n+5)
-				border-left: 0
+			&:nth-child(n+4)
+				border-right: 0
+			&:last-child
+				border-right: 1px solid #e8ebf1
 			img
 				position: absolute
 				top: 50%
 				left: 50%
 				transform: translate(-50%, -50%)
 			
-
+.download-adw
+		display: flex
+		margin-bottom: 40px
+		justify-content: space-between
+		align-items: flex-end
+		height: 140px
+		width: 100%
+		border: 1px solid #81e4ed
+		padding: 36px 40px 30px 30px
+		background-color: #e8fcfe
+		&__text
+			margin: 0
+			flex-basis: 610px
+			line-height: 26px
+			font-size: 16px
+		&__button
+			background: linear-gradient(to bottom, #7fe2ec 60%, #33b1cc 99%)
+			display: flex
+			justify-content: space-between
+			flex-basis: 240px
+			padding: 17px
+			border: 1px solid #2aacc8
+			border-radius: 7px
+			margin-bottom: 3px
+			height: 60px
+			&__text
+				font-weight: bold
+				font-size: 18px
+				text-transform: uppercase
 .img-responsive
 	display: block
 	max-width: 100%
