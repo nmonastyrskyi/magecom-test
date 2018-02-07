@@ -21,6 +21,7 @@
 	#slider
 		min-width: 90%!important
 		min-height: 340px!important
+	/*HEADER*/
 	.header
 		&__logo
 			flex-shrink: 5
@@ -32,11 +33,37 @@
 		&__slider
 			height: 400px
 
+	/*MIDDLE SECTION*/
+	.middle-section
+		height: auto
+		&__content
+			flex-wrap: wrap
+		&__item
+			flex-basis: 45%
+			padding-bottom: 50px
+
+	/*TESTIMONIALS & CLIENTS*/
+	.testimonials-clients
+		justify-content: space-between
+	.testimonials
+		padding-right: 20px
+	.clients
+		&__content
+			flex-wrap: wrap
+			&__item
+				flex-basis: 50%
+				border: 1px solid #e8ebf1!important
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
-
+	.container
+		padding: 20px
+	#slider
+		min-height: 300px!important
 	.header
+		&__nav
+			padding-left: 0
 		&__logo
 			text-align: center
 			display: block
@@ -49,15 +76,67 @@
 			&--flex
 				flex-wrap: wrap
 				justify-content: center
+		&__slider
+			height: 360px
+
+	.owl-carousel
+		img
+			// height: 200px
+			width: 200px
+
+	/*TESTIMONIALS & CLIENTS*/
+	.testimonials-clients
+		flex-direction: column-reverse
+		align-items: center
+		text-align: center
+		height: auto!important
+	.testimonials
+		padding: 0
+		flex-basis: 0
+		&__header
+			text-align: center
+			display: inline-block
+			margin-top: 10px
+			&__logo,&__title
+				display: inline-block
+	.clients
+		&__content
+			margin-bottom: 20px
+			flex-wrap: wrap
+			&__item
+				flex-basis: 33%
+		&__header
+			margin-top: 10px
+			text-align: center
+			display: inline-block
+		&__logo,&__title
+			display: inline-block
 
 @media only screen and (max-width : 600px)
 	/**/
+	#slider
+		min-height: 260px!important
+	.header
+		&__slider
+			height: 320px
+
+	/*MIDDLE SECTION*/
+	.middle-section
+		&__content
+			flex-direction: column
+		&__item
+			flex-basis: 90%
+			padding-bottom: 50px
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
+	#slider
+		min-height: 200px!important
+	.header
+		&__slider
+			height: 270px
 
 @media only screen and (max-width : 370px)
 	/**/
