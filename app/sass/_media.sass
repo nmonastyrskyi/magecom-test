@@ -5,15 +5,52 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
+	.container
+		min-width: 0
+		padding: 0 15px
+	#slider
+		min-width: 900px!important
 
+	.header
+		&__logo
+			padding: 0
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-
+	#slider
+		min-width: 90%!important
+		min-height: 340px!important
+	.header
+		&__logo
+			flex-shrink: 5
+			font-size: 40px
+		&__nav
+			padding-left: 30px
+			&__item
+				text-align: center
+		&__slider
+			height: 400px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	/**/
+
+	.header
+		&__logo
+			text-align: center
+			display: block
+			background-color: #fff
+			flex-basis: 100vw
+			border-radius: 0 0 50px 50px
+			font-size: 40px
+		&__top
+			width: 100%
+			&--flex
+				flex-wrap: wrap
+				justify-content: center
+
+@media only screen and (max-width : 600px)
 	/**/
 
 
@@ -21,6 +58,9 @@
 @media only screen and (max-width : 480px)
 	/**/
 
+
+@media only screen and (max-width : 370px)
+	/**/
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
