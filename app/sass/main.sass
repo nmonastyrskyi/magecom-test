@@ -54,6 +54,7 @@ li
 
 a
 	color: inherit
+	transition: all 0.5s ease
 	&:hover,&:active,&:focus
 		color: $accent
 		text-decoration: none
@@ -93,9 +94,11 @@ h1,h2,h3,h4,h5
 		cursor: pointer
 		&__item
 			text-transform: uppercase
+			transition: all 0.7s ease
 			font-size: 13px
 			padding: 10px 15px
 			border-top: 5px solid transparent
+			font-weight: bold
 			&:hover
 				color: $accent
 				background-color: #fff
@@ -111,39 +114,59 @@ h1,h2,h3,h4,h5
 .dropdown__content
 	border: 1px solid rgb(232,235,241)
 	border-top: 0
-	border-bottom: 0
-	display: none
+	display: block
+	transition: all 0.5s ease
+	opacity: 0
+	z-index: -1
+	visibility: hidden
 	text-transform: none
 	background-color: #fff
 	min-width: 200px
+	width: 200px
 	margin-left: -16px
 	margin-top: 5px
+	padding-left: 0
+	z-index: 3
 
 	position: absolute
 .dropdown:hover .dropdown__content
-	display: block
+	opacity: 1
+	visibility: visible
+	z-index: 2
 
 	color: #000
 .dropdown
 	&__item
-		padding: 7px 15px 15px 15px
+		padding: 0px 0 12px 13px
 		display: block
 		z-index: 2
-		transition: all 0.5s ease
+		font-weight: normal
 		&:hover
 			color: $accent
 		&:first-child
 			padding-top: 22px
 		&:last-child
-			padding-bottom: 22px
-			border-bottom: 5px solid $accent
+			padding-bottom: 16px
+			&:after
+				content: ''
+				width: 201px
+				height: 5px
+				position: absolute
+				background-color: #2aacc8
+				margin-top: 17px
+				margin-left: -14px
+			
 		&::after
 			background-color: rgb(231,231,231)
 			content: ''
 			width: 187px
 			height: 1px
 			display: block
-			position: absolute
+			position: relative
+			margin-left: -9px
+			margin-top: 10px
+			z-index: 4
+
 
 	/*HEADER TOP END*/
 
@@ -205,18 +228,27 @@ h1,h2,h3,h4,h5
 				border-radius: 20px
 				position: absolute
 				z-index: 0
-				margin-left: -9.5px
-				margin-top: -6px
+				margin-left: -10.5px
+				margin-top: -5px
 
 				display: inline-block
 		&__icon
 			display: inline-block
 			z-index: 2
 			position: relative
+		// #pencil
+		// 	margin-top: -3px
+		#fullscreen
+			margin-bottom: -4px
+		#viewlist
+			margin-bottom: -5px
+			margin-left: 1px
+		#plane
+			margin-bottom: -3px
 		&__title
 			margin: 0 0 0 20px
-			vertical-align: center
 			display: inline-block
+			font-size: 15px
 		&__text
 			font-size: 13px
 			margin-top: 20px
@@ -299,6 +331,10 @@ h1,h2,h3,h4,h5
 			border: 1px solid #e8ebf1
 			display: block
 			box-shadow: inset 0px 0px 40px 0px rgba(#e8ebf1, 0.6)
+			transition: all 0.5s ease
+			&:hover
+				transform: scale(1.1)
+				z-index: 2
 			&:nth-child(n+4)
 				border-top: 0
 			&:nth-child(-n+2)
@@ -338,10 +374,88 @@ h1,h2,h3,h4,h5
 			border-radius: 7px
 			margin-bottom: 3px
 			height: 60px
+			transition: all 0.3s ease
+			&:hover
+				color: #3b5998
+			&:active
+				outline: none
+				background: linear-gradient(to bottom, #7fe2ec 40%, #33b1cc 99%)
+			&:focus
+				outline: none
+
 			&__text
 				font-weight: bold
 				font-size: 18px
 				text-transform: uppercase
+
+/*FOOTER*/				
+.p--footer
+	font-size: 14px
+	padding: 0
+	line-height: 1.25
+.li--footer
+	font-size: 14px
+	padding-bottom: 4px
+
+.footer--flex-container
+	display: flex
+	margin-top: 11px
+	width: 100%
+	position: relative
+	justify-content: space-between
+	flex-wrap: wrap
+	align-items: flex-basis
+.footer
+	background-color: #e8ebf1
+	border-top: 1px solid #d9d9d9
+	&__title
+		font-size: 15px
+		// margin-bottom: 24px
+		&--social
+			margin-left: 7px
+	&__about
+		flex-basis: 234px
+	&__explore
+		flex-basis: 71px
+		&__list
+			padding-left: 0
+			margin-top: -15px
+			cursor: pointer
+	&__browse
+		flex-basis: 135px
+		&__list
+			cursor: pointer
+			padding-left: 0
+			margin-top: -15px
+	&__contacts
+		flex-basis: 155px
+		&__addr
+			&--title
+				font-size: 14px
+				text-transform: none
+				margin: 0
+			&--text
+				margin: 0
+		&__phone
+			margin-bottom: 0
+		&__fax
+			margin: 0
+	&__social
+		flex-basis: 190px
+		&__box
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			cursor: pointer
+			a
+				padding-bottom: 8px
+				transition: all 0.5s ease
+				&:hover
+					transform: scale(1.1)
+	&__bottom
+		margin: 25px 0 45px 0
+		&__copyright
+			margin: 5px 0
 .img-responsive
 	display: block
 	max-width: 100%
