@@ -1,5 +1,6 @@
 $(function() {
-
+  $("body").css("display", "none");
+  $("body").fadeIn(2000);
         /*MOBILE MENU*/
   $("#my-menu").mmenu();
   var mmenuAPI = $("#my-menu").data( "mmenu" )
