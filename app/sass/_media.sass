@@ -54,6 +54,31 @@
 				flex-basis: 50%
 				border: 1px solid #e8ebf1!important
 
+	.download-adw
+		padding:  25.2px 28px 21px 21px
+		align-items: center
+		height: auto
+		&__text
+			padding-right: 10px
+
+	/*FOOTER*/
+	.footer
+		&__social
+			margin: auto
+			text-align: center
+			// flex-basis: 50%
+			&__box
+				flex-wrap: nowrap
+		&__bottom
+			&:before
+				content: ''
+				width: 100%
+				position: relative
+				display: block
+				height: 3px
+				top: -15px
+				background-color: $accent
+			
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
@@ -61,21 +86,24 @@
 		padding: 20px
 	#slider
 		min-height: 300px!important
+	.hamburger
+		display: block
 	.header
 		&__nav
-			padding-left: 0
+			display: none
 		&__logo
-			text-align: center
+			// text-align: center
 			display: block
-			background-color: #fff
-			flex-basis: 100vw
-			border-radius: 0 0 50px 50px
+			// background-color: #fff
+			// flex-basis: 100vw
+			// border-radius: 0 0 50px 50px
 			font-size: 40px
 		&__top
 			width: 100%
 			&--flex
-				flex-wrap: wrap
-				justify-content: center
+				padding: 0 20px
+				background: #fff
+				align_content: center
 		&__slider
 			height: 360px
 
@@ -86,12 +114,13 @@
 
 	/*TESTIMONIALS & CLIENTS*/
 	.testimonials-clients
-		flex-direction: column-reverse
+		flex-direction: column
 		align-items: center
 		text-align: center
 		height: auto!important
 	.testimonials
 		padding: 0
+		margin-bottom: 20px
 		flex-basis: 0
 		&__header
 			text-align: center
@@ -112,13 +141,136 @@
 		&__logo,&__title
 			display: inline-block
 
+	.download-adw
+		flex-wrap: wrap
+		justify-content: center
+		text-align: center
+		&__text
+			padding-right: 0
+			margin-bottom: 20px
+
+	/*FOOTER*/
+
+	.footer
+		&--flex-container
+			flex-wrap: wrap
+			text-align: center
+			margin: auto
+			width: 90%
+
+		&__about
+			flex-basis: 100%
+		&__explore
+			padding-right: 30px
+			.li--footer
+					width: 26%
+		&__browse
+			padding-left: 30px
+		&__explore,&__browse
+			flex-basis: 50%
+			&__list
+				margin-top: 10px
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+		&__contacts
+			flex-basis: 45%		
+			&--flex
+				display: flex	
+				justify-content: space-around
+				margin: auto
+			&__addr,&__mobile
+				display: inline-block
+				flex-grow: 3
+			&__moblie
+				flex-grow: 5
+		&__social
+			margin-right: 6%
+			text-align: center
+			flex-basis: 32%
+			&__box
+				flex-wrap: wrap
+		
+		&__about,&__explore,&__browse
+			&:after
+				content: ''
+				width: 100%
+				height: 1px
+				background-color: #c4c4c4
+				position: relative
+				display: block
+		&__bottom
+			margin-bottom: 10px
+@media only screen and (max-width : 700px)
+	/*HEADER*/
+	.ug-item-wrapper,.ug-slider-inner,.ug-slider-wrapper
+		height: 285px!important
+	.bullets__menu
+		margin-top: -15px
+	.header__slider
+		height: 335px
+
+	/*FOOTER*/
+	.footer
+		&__explore
+			padding-right: 30px
+			.li--footer
+				width: auto
+		&__browse
+		&__explore,&__browse
+			padding: 0
+			flex-basis: 100%
+			&__list
+				margin-top: 10px
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-around
+		&__contacts
+			flex-basis: 100%		
+			&--flex
+				display: flex	
+				justify-content: space-around
+				margin: auto
+				align-items: flex-end
+			&__addr--title
+				display: inline-block
+			&__addr,&__mobile
+				display: inline-block
+				fwlex-wrap: wrap
+				margin-bottom: 10px
+				flex-grow: 3
+				.p--footer
+					display: inline-block
+					margin: 0
+			&__moblie
+				flex-grow: 5
+		&__social
+			margin-right: 6%
+			text-align: center
+			flex-basis: 100%
+			margin: auto
+			&__box
+				flex-wrap: wrap
+		&__about,&__explore,&__browse,&__contacts
+			&:after
+				content: ''
+				width: 100%
+				height: 1px
+				background-color: #c4c4c4
+				position: relative
+				display: block
+
 @media only screen and (max-width : 600px)
 	/**/
+		/*HEADER*/
+	.ug-item-wrapper,.ug-slider-inner,.ug-slider-wrapper
+		height: 265px!important
 	#slider
-		min-height: 260px!important
+		min-height: 280px!important
 	.header
 		&__slider
-			height: 320px
+			height: 300px
+			padding: 0
 
 	/*MIDDLE SECTION*/
 	.middle-section
@@ -128,23 +280,83 @@
 			flex-basis: 90%
 			padding-bottom: 50px
 
+	/*CLIENTS*/
+	.clients
+		&__content
+			width: auto
+			&__item
+				flex-basis: 50%
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
+		/*HEADER*/
+	.ug-item-wrapper,.ug-slider-inner,.ug-slider-wrapper
+		height: 210px!important
 	#slider
-		min-height: 200px!important
+		min-height: 235px!important
 	.header
 		&__slider
-			height: 270px
+			height: 250px
+	/*CLIENTS*/
+	.clients
+		&__content
+			width: auto
+			justify-content: center
+			&__item
+				flex-basis: 50%
+
+//IPHONE 8+
+@media only screen and (max-width : 414px)
+	/**/
+		/*HEADER*/
+	.ug-item-wrapper,.ug-slider-inner,.ug-slider-wrapper
+		height: 200px!important
+	#slider
+		min-height: 215px!important
+	.header
+		&__slider
+			height: 235px
+
+@media only screen and (max-width : 400px)
+
+	.footer
+		&__social
+			flex-basis: 70%
+			&__box
+			&__item
+				flex-basis: 33%
+//IPHONE 8
+@media only screen and (max-width : 375px)
+	/**/
+		/*HEADER*/
+	.ug-item-wrapper,.ug-slider-inner,.ug-slider-wrapper
+		height: 190px!important
+	#slider
+		min-height: 205px!important
 
 @media only screen and (max-width : 370px)
 	/**/
 
+	/*CLIENTS*/
+	.clients
+		&__content
+			width: auto
+			justify-content: center
+			&__item
+				flex-basis: 70%
+				border-width: 2px!important
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
-
+		/*HEADER*/
+	.ug-item-wrapper,.ug-slider-inner,.ug-slider-wrapper
+		height: 150px!important
+	#slider
+		min-height: 170px!important
+	.header
+		&__slider
+			height: 195px
 
 /*==========  Mobile First  ==========*/
 

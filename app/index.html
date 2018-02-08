@@ -22,218 +22,251 @@
 </head>
 
 <body>
-    <header class="header">
-        <section class="header__top">
-            <div class="container header__top--flex">
-                <div class="header__logo">Logo</div>
-                <nav class="header__nav-box">
-                    <ul class="header__nav">
-                        <li class="header__nav__item"><a href="#">Home</a></li>
-                        <li class="header__nav__item"><a href="#">About us</a></li>
-                        <li class="header__nav__item header__nav__item--dropdown dropdown"><span>Services</span>
-                            <ul class="dropdown__content">
-                                <li class='dropdown__item'><a href="#">Web Design</a></li>
-                                <li class='dropdown__item'><a href="#">Wordpress Design</a></li>
-                                <li class='dropdown__item'><a href="#">Mobile App Development</a></li>
-                                <li class='dropdown__item'><a href="#">Internet Marketing</a></li>
-                                <li class='dropdown__item'><a href="#">Social Media Managment</a></li>
-                            </ul>
-                        </li>
-                        <li class="header__nav__item header__nav__item--dropdown"><a href="#">Portfolio</a></li>
-                        <li class="header__nav__item"><a href="#">Blog</a></li>
-                        <li class="header__nav__item"><a href="#">Contact us</a></li>
-                    </ul>
-                </nav>
+    <div class="page">
+        <!-- Required by mobile-menu API -->
+        <header class="header">
+            <section class="header__top">
+                <div class="container header__top--flex">
+                    <div class="header__logo">Logo</div>
+                    <nav class="header__nav-box">
+                        <ul class="header__nav">
+                            <li class="header__nav__item"><a href="#">Home</a></li>
+                            <li class="header__nav__item"><a href="#">About us</a></li>
+                            <li class="header__nav__item header__nav__item--dropdown dropdown"><span>Services</span>
+                                <ul class="dropdown__content">
+                                    <li class='dropdown__item'><a href="#">Web Design</a></li>
+                                    <li class='dropdown__item'><a href="#">Wordpress Design</a></li>
+                                    <li class='dropdown__item'><a href="#">Mobile App Development</a></li>
+                                    <li class='dropdown__item'><a href="#">Internet Marketing</a></li>
+                                    <li class='dropdown__item'><a href="#">Social Media Managment</a></li>
+                                </ul>
+                            </li>
+                            <li class="header__nav__item header__nav__item--dropdown"><a href="#">Portfolio</a></li>
+                            <li class="header__nav__item"><a href="#">Blog</a></li>
+                            <li class="header__nav__item"><a href="#">Contact us</a></li>
+                        </ul>
+                    </nav>
+                    <!-- MOBILE MENU -->
+                    <button class="hamburger hamburger--elastic" type="button">
+                        <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    <nav id="my-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><span>Services</span>
+                                <ul>
+                                    <li><a href="#">Web Design</a></li>
+                                    <li><a href="#">Wordpress Design</a></li>
+                                    <li><a href="#">Mobile App Development</a></li>
+                                    <li><a href="#">Internet Marketing</a></li>
+                                    <li><a href="#">Social Media Managment</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <section class="header__slider">
+                <div class="slider__wrapper">
+                    <div id="slider" style="display:none;">
+                        <img data-image="img/header-bg.jpg">
+                        <img data-image="img/header-bg.jpg">
+                        <img data-image="img/header-bg.jpg">
+                        <img data-image="img/header-bg.jpg">
+                        <img data-image="img/header-bg.jpg">
+                    </div>
+                    <div class="bullets__menu">
+                        <div class="bullet"></div>
+                        <div class="bullet"></div>
+                        <div class="bullet"></div>
+                        <div class="bullet"></div>
+                        <div class="bullet"></div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <section class="middle-section">
+            <div class="container">
+                <div class="middle-section__content">
+                    <div class="middle-section__item">
+                        <div class="middle-section__iheader">
+                            <img id="pencil" class="middle-section__item__icon" src="img/icons/pencil.svg" alt="pencil-icon">
+                            <h3 class="h3 middle-section__item__title">Clean Theme</h3>
+                        </div>
+                        <div class="middle-section__item__text">
+                            Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.
+                        </div>
+                        <a href='#' class="middle-section__item--more">
+                        <img src="img/icons/arrows/arrow-right.svg" alt="arrow-right">
+                        <span>Read More</span>
+                    </a>
+                    </div>
+                    <div class="middle-section__item">
+                        <div class="middle-section__item__header">
+                            <img id='fullscreen' class="middle-section__item__icon" src="img/icons/fullscreen.svg" alt="fullscreen-icon">
+                            <h3 class="h3 middle-section__item__title">Responsive Design</h3>
+                        </div>
+                        <div class="middle-section__item__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod placerat dui et tincidunt. Sed sollicitudin posuere auctor. Phasellus at ultricies nisl. Integer at leo eros.
+                        </div>
+                        <a href='#' class="middle-section__item--more">
+                        <img src="img/icons/arrows/arrow-right.svg" alt="arrow-right">
+                        <span>Read More</span>
+                    </a>
+                    </div>
+                    <div class="middle-section__item">
+                        <div class="middle-section__item__header">
+                            <img id='viewlist' class="middle-section__item__icon" src="img/icons/view-list.svg" alt="">
+                            <h3 class="h3 middle-section__item__title">Fully Layerd Psd</h3>
+                        </div>
+                        <div class="middle-section__item__text">
+                            Phasellus lobortis metus non augue sodales volutpat. Vestibulum sit amet nibh eros, hendrerit venenatis est. In vitae nulla nec purus cursus pretium sed id magna.
+                        </div>
+                        <a href='#' class="middle-section__item--more">
+                        <img src="img/icons/arrows/arrow-right.svg" alt="arrow-right">
+                        <span>Read More</span>
+                    </a>
+                    </div>
+                    <div class="middle-section__item">
+                        <div class="middle-section__item__header">
+                            <img id="plane" class="middle-section__item__icon" src="img/icons/plane.svg" alt="plane-icon">
+                            <h3 class="h3 middle-section__item__title">Ready for coding</h3>
+                        </div>
+                        <div class="middle-section__item__text">
+                            Vivamus convallis feugiat mauris sed posuere. Nam rutrum, quam quis euismod commodo, elit est porta quam, non placerat eros neque porta ante. Fusce quis odio urna.
+                        </div>
+                        <a href='#' class="middle-section__item--more">
+                        <img src="img/icons/arrows/arrow-right.svg" alt="arrow-right">
+                        <span>Read More</span>
+                    </a>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="header__slider">
-            <div class="slider__wrapper">
-                <div id="slider" style="display:none;">
-                    <img data-image="img/header-bg.jpg">
-                    <img data-image="img/header-bg.jpg">
-                    <img data-image="img/header-bg.jpg">
-                    <img data-image="img/header-bg.jpg">
-                    <img data-image="img/header-bg.jpg">
-                </div>
-                <div class="bullets__menu">
-                    <div class="bullet"></div>
-                    <div class="bullet"></div>
-                    <div class="bullet"></div>
-                    <div class="bullet"></div>
-                    <div class="bullet"></div>
-                </div>
-            </div>
-        </section>
-    </header>
-    <section class="middle-section">
         <div class="container">
-            <div class="middle-section__content">
-                <div class="middle-section__item">
-                    <div class="middle-section__iheader">
-                       <img id="pencil" class="middle-section__item__icon" src="img/icons/pencil.svg" alt="pencil-icon">
-                        <h3 class="h3 middle-section__item__title">Clean Theme</h3>
+            <section class="works">
+                <div class="works__header">
+                    <div class="works__header--left">
+                        <img src="img/icons/cursor.svg" alt="cursor-icon" class="works__header__cursor">
+                        <h2 class="h2 works__header__title">Latest Works</h2>
                     </div>
-                    <div class="middle-section__item__text">
-                        Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.
+                    <div class="works__header--right works__header__nav clearfix">
+                        <div class="works__header__arrow-left "><img src="img/icons/arrows/arrow-left.svg" alt="arrow-left icon"></div>
+                        <div class="works__header__arrow-right "><img src="img/icons/arrows/arrow-right.svg" alt="arrow-right icon"></div>
                     </div>
-                    <a href='#' class="middle-section__item--more">
-                        <img src="img/icons/arrows/arrow-right.svg" alt="arrow-right">
-                        <span>Read More</span>
-                    </a>
                 </div>
-                <div class="middle-section__item">
-                    <div class="middle-section__item__header">
-                        <img id = 'fullscreen' class="middle-section__item__icon" src="img/icons/fullscreen.svg" alt="fullscreen-icon">
-                        <h3 class="h3 middle-section__item__title">Responsive Design</h3>
+                <div class="works__carousel">
+                    <div class="owl-carousel">
+                        <img src="img/works/works-img-1.jpg">
+                        <img src="img/works/works-img-2.jpg">
+                        <img src="img/works/works-img-3.jpg">
+                        <img src="img/works/works-img-4.jpg">
                     </div>
-                    <div class="middle-section__item__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod placerat dui et tincidunt. Sed sollicitudin posuere auctor. Phasellus at ultricies nisl. Integer at leo eros.
-                    </div>
-                    <a href='#' class="middle-section__item--more">
-                        <img src="img/icons/arrows/arrow-right.svg" alt="arrow-right">
-                        <span>Read More</span>
-                    </a>
                 </div>
-                <div class="middle-section__item">
-                    <div class="middle-section__item__header">
-                        <img id = 'viewlist' class="middle-section__item__icon" src="img/icons/view-list.svg" alt="">
-                        <h3 class="h3 middle-section__item__title">Fully Layerd Psd</h3>
+            </section>
+            <section class="testimonials-clients">
+                <article class="testimonials">
+                    <div class="testimonials__header">
+                        <img src="img/icons/comments.svg" alt="comment-logo" class="testimonials__header__logo">
+                        <h2 class="testimonials__header__title h2">Testimonials</h2>
                     </div>
-                    <div class="middle-section__item__text">
-                        Phasellus lobortis metus non augue sodales volutpat. Vestibulum sit amet nibh eros, hendrerit venenatis est. In vitae nulla nec purus cursus pretium sed id magna.
+                    <p class="testimonials__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nulla sapien, at aliquam erat. Sed vitae massa tellus. Aliquam commodo aliquam metus, sed iaculis nibh tempus id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam nec nisi in nisl euismod fringilla.</p>
+                    <p class="testimonials__signature">John Travis, CEO, DomainName.com</p>
+                </article>
+                <article class="clients">
+                    <div class="clients__header">
+                        <img src="img/icons/clients.svg" alt="clients-logo" class="clients__header__logo">
+                        <h2 class="clients__header__title h2">Our Clients</h2>
                     </div>
-                    <a href='#' class="middle-section__item--more">
-                        <img src="img/icons/arrows/arrow-right.svg" alt="arrow-right">
-                        <span>Read More</span>
-                    </a>
-                </div>
-                <div class="middle-section__item">
-                    <div class="middle-section__item__header">
-                        <img id="plane" class="middle-section__item__icon" src="img/icons/plane.svg" alt="plane-icon">
-                        <h3 class="h3 middle-section__item__title">Ready for coding</h3>
+                    <div class="clients__content">
+                        <div class="clients__content__item"><img src="img/clients/logo1.png" alt="cox-communications" class="clients__content__logo"></div>
+                        <div class="clients__content__item"><img src="img/clients/logo2.png" alt="CNN" class="clients__content__logo"></div>
+                        <div class="clients__content__item"><img src="img/clients/logo3.png" alt="Apartment Finder" class="clients__content__logo"></div>
+                        <div class="clients__content__item"><img src="img/clients/logo4.png" alt="John Deere" class="clients__content__logo"></div>
+                        <div class="clients__content__item"><img src="img/clients/logo5.png" alt="Banana Boat" class="clients__content__logo"></div>
+                        <div class="clients__content__item"><img src="img/clients/logo6.png" alt="FujiFilm" class="clients__content__logo"></div>
                     </div>
-                    <div class="middle-section__item__text">
-                        Vivamus convallis feugiat mauris sed posuere. Nam rutrum, quam quis euismod commodo, elit est porta quam, non placerat eros neque porta ante. Fusce quis odio urna.
-                    </div>
-                    <a href='#' class="middle-section__item--more">
-                        <img src="img/icons/arrows/arrow-right.svg" alt="arrow-right">
-                        <span>Read More</span>
-                    </a>
-                </div>
-            </div>
+                </article>
+            </section>
+            <article class="download-adw">
+                <p class="download-adw__text">
+                    This is a clean and modern, four column website PSD template. You can code it into a Wordpress website, HTML5 responsive website for your personal or client works. So ahead and download this wonderful PSD template!
+                </p>
+                <button class="download-adw__button">
+                    <img src="img/icons/download.svg" alt="Download-logo" class="download-adw__logo">
+                    <span class='download-adw__button__text'>Download Psd</span>
+                </button>
+            </article>
         </div>
-    </section>
-    <div class="container">
-        <section class="works">
-            <div class="works__header">
-                <div class="works__header--left">
-                    <img src="img/icons/cursor.svg" alt="cursor-icon" class="works__header__cursor">
-                    <h2 class="h2 works__header__title">Latest Works</h2>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer--flex-container">
+                    <div class="footer__about">
+                        <h3 class="footer__title h3">About Us</h3>
+                        <p class="footer__about__text p--footer">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod placerat dui et tincidunt. Sed sollicitudin posuere auctor. Phasellus at ultricies nisl. Integer at leo eros. Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie.
+                        </p>
+                    </div>
+                    <div class="footer__explore">
+                        <h3 class="footer__title h3">Explore</h3>
+                        <ul class="footer__explore__list">
+                            <li class="li--footer"><a href="#">Home</a></li>
+                            <li class="li--footer"><a href="#">About Us</a></li>
+                            <li class="li--footer"><a href="#">Services</a></li>
+                            <li class="li--footer"><a href="#">Portfolio</a></li>
+                            <li class="li--footer"><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__browse">
+                        <h3 class="footer__title h3">Browse</h3>
+                        <ul class="footer__browse__list">
+                            <li class="li--footer"><a href="#">Careers</a></li>
+                            <li class="li--footer"><a href="#">Press & Media</a></li>
+                            <li class="li--footer"><a href="#">Contact Us</a></li>
+                            <li class="li--footer"><a href="#">Terms of Service</a></li>
+                            <li class="li--footer"><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__contacts">
+                        <h3 class="footer__title h3">Contact Us</h3>
+                        <div class="footer__contacts--flex">
+                            <div class="footer__contacts__addr">
+                                <h4 class="footer__contacts__addr--title">Addr.</h4>
+                                <p class="footer__contacts__addr--text p--footer">Always Street 265 </p>
+                                <p class="footer__contacts__addr--text p--footer">0X - 125 - Canada</p>
+                            </div>
+                            <div class="footer__contacts__mobile">
+                                <p class="footer__contacts__phone p--footer">Phone: 987-6543-210</p>
+                                <p class="footer__contacts__fax p--footer">Fax: 987-6543-210</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__social">
+                        <h3 class="footer__title footer__title--social h3">Connect with us</h3>
+                        <div class="footer__social__box">
+                            <a class = "footer__social__item" href="#"><img src="img/icons/social/facebook.png" alt="facebook-icon"></a>
+                            <a class = "footer__social__item" href="#"><img src="img/icons/social/dribbble.png" alt="dribbble-icon"></a>
+                            <a class = "footer__social__item" href="#"><img src="img/icons/social/pinterest.png" alt="printerest-icon"></a>
+                            <a class = "footer__social__item" href="#"><img src="img/icons/social/linkedin.png" alt="linkedin-icon"></a>
+                            <a class = "footer__social__item" href="#"><img src="img/icons/social/skype.png" alt="skype-icon"></a>
+                            <a class = "footer__social__item" href="#"><img src="img/icons/social/share.png" alt="share-icon"></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="works__header--right works__header__nav clearfix">
-                    <div class="works__header__arrow-left "><img src="img/icons/arrows/arrow-left.svg" alt="arrow-left icon"></div>
-                    <div class="works__header__arrow-right "><img src="img/icons/arrows/arrow-right.svg" alt="arrow-right icon"></div>
+                <div class="footer__bottom">
+                    <p class="p--footer footer__bottom__copyright">© Copyright</p>
+                    <p class="p--footer footer__bottom__copyright">Client Logos are copyright and trademark of the respective owners / companies. </p>
                 </div>
             </div>
-            <div class="works__carousel">
-                <div class="owl-carousel">
-                    <img src="img/works/works-img-1.jpg">
-                    <img src="img/works/works-img-2.jpg">
-                    <img src="img/works/works-img-3.jpg">
-                    <img src="img/works/works-img-4.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="testimonials-clients">
-            <article class="testimonials">
-                <div class="testimonials__header">
-                    <img src="img/icons/comments.svg" alt="comment-logo" class="testimonials__header__logo">
-                    <h2 class="testimonials__header__title h2">Testimonials</h2>
-                </div>
-                <p class="testimonials__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nulla sapien, at aliquam erat. Sed vitae massa tellus. Aliquam commodo aliquam metus, sed iaculis nibh tempus id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam nec nisi in nisl euismod fringilla.</p>
-                <p class="testimonials__signature">John Travis, CEO, DomainName.com</p>
-            </article>
-            <article class="clients">
-                <div class="clients__header">
-                    <img src="img/icons/clients.svg" alt="clients-logo" class="clients__header__logo">
-                    <h2 class="clients__header__title h2">Our Clients</h2>
-                </div>
-                <div class="clients__content">
-                    <div class="clients__content__item"><img src="img/clients/logo1.png" alt="cox-communications" class="clients__content__logo"></div>
-                    <div class="clients__content__item"><img src="img/clients/logo2.png" alt="CNN" class="clients__content__logo"></div>
-                    <div class="clients__content__item"><img src="img/clients/logo3.png" alt="Apartment Finder" class="clients__content__logo"></div>
-                    <div class="clients__content__item"><img src="img/clients/logo4.png" alt="John Deere" class="clients__content__logo"></div>
-                    <div class="clients__content__item"><img src="img/clients/logo5.png" alt="Banana Boat" class="clients__content__logo"></div>
-                    <div class="clients__content__item"><img src="img/clients/logo6.png" alt="FujiFilm" class="clients__content__logo"></div>
-                </div>
-            </article>
-        </section>
-        <article class="download-adw">
-            <p class="download-adw__text">
-                This is a clean and modern, four column website PSD template. You can code it into a Wordpress website, HTML5 responsive website for your personal or client works. So ahead and download this wonderful PSD template!
-            </p>
-            <button class="download-adw__button">
-                <img src="img/icons/download.svg" alt="Download-logo" class="download-adw__logo">
-                <span class='download-adw__button__text'>Download Psd</span>
-            </button>
-        </article>
+        </footer>
+        <script src="js/scripts.min.js"></script>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer--flex-container">
-                <div class="footer__about">
-                    <h3 class="footer__title h3">About Us</h3>
-                    <p class="footer__about__text p--footer">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod placerat dui et tincidunt. Sed sollicitudin posuere auctor. Phasellus at ultricies nisl. Integer at leo eros. Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie.
-                    </p>
-                </div>
-                <div class="footer__explore">
-                    <h3 class="footer__title h3">Explore</h3>
-                    <ul class="footer__explore__list">
-                        <li class="li--footer"><a href="#">Home</a></li>
-                        <li class="li--footer"><a href="#">About Us</a></li>
-                        <li class="li--footer"><a href="#">Services</a></li>
-                        <li class="li--footer"><a href="#">Portfolio</a></li>
-                        <li class="li--footer"><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer__browse">
-                    <h3 class="footer__title h3">Browse</h3>
-                    <ul class="footer__browse__list">
-                        <li class="li--footer"><a href="#">Careers</a></li>
-                        <li class="li--footer"><a href="#">Press & Media</a></li>
-                        <li class="li--footer"><a href="#">Contact Us</a></li>
-                        <li class="li--footer"><a href="#">Terms of Service</a></li>
-                        <li class="li--footer"><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer__contacts">
-                    <h3 class="footer__title h3">Contact Us</h3>
-                    <h4 class="footer__contacts__addr--title">Addr.</h4>
-                    <p class="footer__contacts__addr--text p--footer">Always Street 265 </p>
-                    <p class="footer__contacts__addr--text p--footer">0X - 125 - Canada</p>
-                    <p class="footer__contacts__phone p--footer">Phone: 987-6543-210</p>
-                    <p class="footer__contacts__fax p--footer">Fax: 987-6543-210</p>
-                </div>
-                <div class="footer__social">
-                    <h3 class="footer__title footer__title--social h3">Connect with us</h3>
-                    <div class="footer__social__box">
-                        <a href="#"><img src="img/icons/social/facebook.png" alt="facebook-icon"></a>
-                        <a href="#"><img src="img/icons/social/dribbble.png" alt="dribbble-icon"></a>
-                        <a href="#"><img src="img/icons/social/pinterest.png" alt="printerest-icon"></a>
-                        <a href="#"><img src="img/icons/social/linkedin.png" alt="linkedin-icon"></a>
-                        <a href="#"><img src="img/icons/social/skype.png" alt="skype-icon"></a>
-                        <a href="#"><img src="img/icons/social/share.png" alt="share-icon"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class = "p--footer footer__bottom__copyright">© Copyright</p>
-                <p class = "p--footer footer__bottom__copyright">Client Logos are copyright and trademark of the respective owners / companies. </p>
-            </div>
-        </div>
-    </footer>
-    <script src="js/scripts.min.js"></script>
 </body>
 
 </html>

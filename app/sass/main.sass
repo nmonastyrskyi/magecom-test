@@ -67,6 +67,13 @@ h1,h2,h3,h4,h5
 .text-center
 	text-align: center
 
+#my-menu 
+  background-color: $accent
+  color: #fefefe
+.hamburger
+	display: none
+	&:focus
+		outline: none
 
 ::selection
 	background-color: $accent
@@ -371,6 +378,7 @@ h1,h2,h3,h4,h5
 			display: flex
 			justify-content: space-between
 			flex-basis: 240px
+			flex-shrink: 0
 			padding: 17px
 			border: 1px solid #2aacc8
 			border-radius: 7px
